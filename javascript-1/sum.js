@@ -2,7 +2,7 @@ function sum(num) {
     let resultSum = num;
   
     function funcSum(n) {
-        if (!n){         
+        if (n === undefined){         
             return resultSum;
         }
         resultSum += n;
