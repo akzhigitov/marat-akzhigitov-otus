@@ -3,7 +3,7 @@ function getPath(selectedElement) {
 	while (selectedElement && selectedElement !== document.body) {
 		const tag = selectedElement.tagName.toLowerCase()
 		const id = selectedElement.id ? "#" + selectedElement.id : '';
-		const className = selectedElement.className ? '.' + selectedElement.className.split(' ').join('.') : ''
+		const className = selectedElement.className ? '.' + selectedElement.className.split(' ').filter(x => x).join('.') : ''
 		const nth = getNthChild(selectedElement)
 		
 		elements.unshift(tag + id + className + nth);
